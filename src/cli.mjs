@@ -38,7 +38,7 @@ async function main(){
     if(values['kit-url'])p.kitURL=values['kit-url'];else if(githubURL&&/^https:\/\/github\.com\/[^/]+\/[^/#?]+\/?$/.test(githubURL))p.kitURL=githubURL;
     p=normalizeProject(p);await atomic(path.join(target,'project.json'),p);
     await atomic(path.join(target,'.explainer-kit.json'),{schemaVersion:1,version:VERSION,kitDirectory:ROOT,sourceURL:values['kit-url']??origin,created:new Date().toISOString()});
-    output({status:'created',project:target,template,sourceStatus:values.source?'Agent must read source before authoring':'No new source supplied',next:'Edit project.json, then follow the requested-stage route in START-HERE.md.'});return;
+    output({status:'created',project:target,template,sourceStatus:values.source?'Agent must read source before authoring':'No new source supplied',next:'Edit project.json, then follow the requested-stage route in AGENTS.md.'});return;
   }
   const dir=values.project??(command==='demo'?path.join(ROOT,'examples/llm'):null);
   if(!dir)throw new KitError('PROJECT_REQUIRED','Specify --project <PROJECT_DIRECTORY>.','Use npm run new -- --path <NEW_PROJECT_DIRECTORY>, or npm run demo.');

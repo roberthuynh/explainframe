@@ -15,7 +15,7 @@ There are two dependency layers. Node and the external media tools run the produ
 | Pinned Kokoro-82M snapshot and selected voices | Local model inference | New narration; reused from normal cache when present |
 | Git | Local history, hooks and message audit | Development; not required just to watch the example |
 
-Figtree and Newsreader fonts are bundled under their OFL notices. No model weights or speech API credentials are committed. [THIRD_PARTY.md](../../THIRD_PARTY.md) separates component licenses.
+Figtree and Newsreader fonts are bundled under their OFL notices. No model weights or speech API credentials are committed. [THIRD_PARTY.md](../THIRD_PARTY.md) separates component licenses.
 
 ## Setup routes for an agent
 

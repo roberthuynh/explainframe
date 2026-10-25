@@ -15,7 +15,7 @@ for(const name of candidates){
  try{await fs.access(path.join(root,name));files.push(name);}
  catch(error){if(error.code!=='ENOENT')throw error;}
 }
-const required=['README.md','START-HERE.md','AGENTS.md','CONTRIBUTING.md','CHANGELOG.md','LICENSE','THIRD_PARTY.md','src/cli.mjs','src/engine/core.mjs','src/player/player.mjs','src/voice/narrate.py','schemas/project.schema.json','docs/README.md','docs/verification/README.md','docs/design/overview.md','docs/guides/using.md','docs/guides/tooling.md','.github/PULL_REQUEST_TEMPLATE.md','.github/workflows/verify.yml','.githooks/commit-msg'];
+const required=['README.md','AGENTS.md','.github/CONTRIBUTING.md','.github/CODE_OF_CONDUCT.md','.github/SECURITY.md','examples/README.md','docs/CHANGELOG.md','LICENSE','docs/THIRD_PARTY.md','src/cli.mjs','src/engine/core.mjs','src/player/player.mjs','src/voice/narrate.py','schemas/project.schema.json','docs/README.md','docs/verification/README.md','docs/design/overview.md','docs/guides/using.md','docs/guides/tooling.md','.github/PULL_REQUEST_TEMPLATE.md','.github/workflows/verify.yml','.githooks/commit-msg'];
 for(const name of required)try{await fs.access(path.join(root,name));}catch{problems.push('Missing '+name);}
 for(const name of files){
  const parts=name.split('/');if(parts.some(p=>skip.has(p))||/^\.env(?:\.|$)/.test(name))problems.push('Generated/private material tracked: '+name);

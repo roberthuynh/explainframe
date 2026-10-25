@@ -51,4 +51,4 @@ Initial speech generation is English. Imported aligned recordings are supported 
 
 See [verification limits](../verification/README.md) for commands and limits.
 
-Read [using the kit](../guides/using.md) for the human workflow, [tooling](../guides/tooling.md) for dependencies, [authoring](../guides/authoring.md) for the project contract and [contributing](../../CONTRIBUTING.md) for changes to the kit itself.
+Read [using the kit](../guides/using.md) for the human workflow, [tooling](../guides/tooling.md) for dependencies, [authoring](../guides/authoring.md) for the project contract and [contributing](../../.github/CONTRIBUTING.md) for changes to the kit itself.

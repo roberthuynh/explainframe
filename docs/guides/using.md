@@ -8,7 +8,7 @@ You do not need to read the implementation or run these commands yourself. Open 
 
 **Develop an explanation first:** “Use this kit to explain [source] for [audience]. Give me the learning goal, script and storyboard proposal first. No voice or video yet.” The agent can write a scene plan without generating media.
 
-**Make an explainer:** “Read START-HERE.md and use this kit to explain [source or topic] for [audience]. Use bottom karaoke captions, an audition board and an editable handoff. Make [formats] and keep it local.”
+**Make an explainer:** “Read AGENTS.md and use this kit to explain [source or topic] for [audience]. Use bottom karaoke captions, an audition board and an editable handoff. Make [formats] and keep it local.”
 
 **Revise:** “In the costs scene, make the subtraction visible. Keep the voice and the other scenes. Refresh the affected preview and requested outputs.” You can also copy or download a revision note from the player and give it to your agent; it names the scene and timestamp. The player collects the request rather than editing the video.
 

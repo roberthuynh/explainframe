@@ -13,11 +13,11 @@ If the answer is no, report the exact missing capability. A text-only conversati
 
 ## Codex and Claude Code
 
-Use the shared START-HERE.md and AGENTS.md. The repository adapters point to the canonical skill. Clone into a permitted workspace, then run `npm ci --ignore-scripts` and `npm run doctor -- --json`. Existing host approval and network controls still apply.
+Use the shared AGENTS.md. The repository adapters point to the canonical skill. Clone into a permitted workspace, then run `npm ci --ignore-scripts` and `npm run doctor -- --json`. Existing host approval and network controls still apply.
 
 ## ChatGPT Work and Work-style hosts
 
-OpenAI documents skills with instructions and optional scripts as a shared authoring format for ChatGPT and Codex. Plugin packaging is the distribution route for installed Work skills across surfaces; a bare repository URL is not automatic skill installation. Reading START-HERE.md gives a capable agent a direct route without requiring a plugin first. [Official skill documentation](https://learn.chatgpt.com/docs/build-skills).
+OpenAI documents skills with instructions and optional scripts as a shared authoring format for ChatGPT and Codex. Plugin packaging is the distribution route for installed Work skills across surfaces; a bare repository URL is not automatic skill installation. Reading AGENTS.md gives a capable agent a direct route without requiring a plugin first. [Official skill documentation](https://learn.chatgpt.com/docs/build-skills).
 
 A Work task may use approved local resources or cloud execution. Cloud environments do not automatically inherit laptop files, cached models or browser sign-ins; local access requires an online authorized computer and appropriate controls. Detect actual tools and filesystem access. [Work execution boundaries](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview).
 

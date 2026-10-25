@@ -1,6 +1,6 @@
 # Explainframe documentation
 
-Start with [using Explainframe](guides/using.md). Agents should read the root [START-HERE.md](../START-HERE.md) and [AGENTS.md](../AGENTS.md) before setup or production.
+Start with [using Explainframe](guides/using.md). Agents should read the root [AGENTS.md](../AGENTS.md) before setup or production.
 
 ## Setup and use
 
@@ -21,9 +21,13 @@ Start with [using Explainframe](guides/using.md). Agents should read the root [S
 
 - [System overview](design/overview.md)
 - [Engine choice](design/engine-choice.md)
-- [Contribution checks](../CONTRIBUTING.md)
+- [Contribution checks](../.github/CONTRIBUTING.md)
 - [PR examples](guides/pr-examples.md)
 - [Verification record and limits](verification/README.md)
+
+- [Changelog](CHANGELOG.md)
+- [Licenses and component notices](THIRD_PARTY.md)
+- [Examples](../examples/README.md)
 
 ## Local artifacts
 

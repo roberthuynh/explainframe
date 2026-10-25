@@ -51,13 +51,13 @@ You do not need to write code or install the tools yourself. Use a coding agent 
 
 To check that the tools work before making your own video, give your agent this prompt:
 
-> Read START-HERE.md and run the included LLM demo using its bundled speech. Handle the required setup and open the preview. Do not download a voice model or create new narration.
+> Read AGENTS.md and run the included LLM demo using its bundled speech. Handle the required setup and open the preview. Do not download a voice model or create new narration.
 
 You should see a narrated explanation of how a language model generates its next token. This uses the included audio and tests the preview workflow.
 
 Then give it your own topic:
 
-> Use this repository to explain [source or topic] for [audience]. Read START-HERE.md, check my environment and handle the setup needed for the task. Ask for any required permissions. Start with a script and preview; do not render a video yet.
+> Use this repository to explain [source or topic] for [audience]. Read AGENTS.md, check my environment and handle the setup needed for the task. Ask for any required permissions. Start with a script and preview; do not render a video yet.
 
 For a finished video in one pass, replace the last sentence with: “Make a short narrated video with captions and an editable handoff.”
 
@@ -116,11 +116,11 @@ Speech and rendering run locally after setup. Your authoring agent still has its
 
 ## Agents and contributors
 
-Start with [START-HERE.md](START-HERE.md) and [AGENTS.md](AGENTS.md). [Authoring](docs/guides/authoring.md) covers the project format; [custom scenes](docs/guides/custom-scenes.md) covers the drawing API. Use custom scenes from sources you trust: they execute JavaScript.
+Start with [AGENTS.md](AGENTS.md). [Authoring](docs/guides/authoring.md) covers the project format; [custom scenes](docs/guides/custom-scenes.md) covers the drawing API. Use custom scenes from sources you trust: they execute JavaScript.
 
-Run `npm ci --ignore-scripts`, then `npm run verify` from the checkout. See [CONTRIBUTING.md](CONTRIBUTING.md) for checks and [verification limits](docs/verification/README.md) for limits. Automated checks do not establish viewer comprehension or time savings.
+Run `npm ci --ignore-scripts`, then `npm run verify` from the checkout. See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for checks and [verification limits](docs/verification/README.md) for limits. Automated checks do not establish viewer comprehension or time savings.
 
-MIT code. Fonts, dependencies and models retain their own licenses; see [THIRD_PARTY.md](THIRD_PARTY.md).
+MIT code. Fonts, dependencies and models retain their own licenses; see [THIRD_PARTY.md](docs/THIRD_PARTY.md).
 
 ## Repository layout
 
@@ -133,7 +133,7 @@ The [documentation index](docs/README.md) links the guides, design notes and ver
 | `src/player/` | The browser player, captions and scene drawing. |
 | `src/voice/` | The offline Python narration worker. |
 | `schemas/` | The project JSON contract. |
-| `examples/` | Curated scenes, supplied narration and playable demos. |
+| [examples/](examples/README.md) | Three complete videos, plus templates and verification examples. |
 | `tests/unit/`, `tests/integration/` | Unit tests and browser/pipeline checks. |
 | `scripts/` | Repository verification and maintenance commands. |
 | `skills/` | The canonical agent workflow; host adapters point here. |
