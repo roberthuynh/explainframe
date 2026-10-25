@@ -12,6 +12,8 @@ Use it to teach a concept, explain a product, walk through research, train a tea
 
 ## Watch the examples
 
+The examples below use English narration and captions. The LLM video is the best place to start.
+
 On GitHub, choose **Code → Download ZIP**, extract the folder, then open `samples.html` in your browser. If you already cloned the repo, open that file in your checkout. The download includes all three videos, captions and interactive players. You do not need to install anything to watch them.
 
 GitHub displays the HTML files as source. The [gallery](samples.html) and interactive links below play when you open them from the downloaded folder. You can also open each example’s `landscape.mp4` or `portrait.mp4` directly.
