@@ -14,6 +14,18 @@ Use it to teach a concept, explain a product, walk through research, train a tea
 
 The examples below use English narration and captions. The LLM video is the best place to start.
 
+### What happens between your prompt and the next token?
+
+https://github.com/user-attachments/assets/ed1d92a3-2593-42c2-af72-fe65ade96c94
+
+### What is Erdős problem 643?
+
+https://github.com/user-attachments/assets/2466875c-3b80-4193-b490-355eda3d3631
+
+### Why does “you” change in Vietnamese?
+
+https://github.com/user-attachments/assets/9eb92b84-f720-4816-a781-4d4aea395b68
+
 On GitHub, choose **Code → Download ZIP**, extract the folder, then open `samples.html` in your browser. If you already cloned the repo, open that file in your checkout. The download includes all three videos, captions and interactive players. You do not need to install anything to watch them.
 
 GitHub displays the HTML files as source. The [gallery](samples.html) and interactive links below play when you open them from the downloaded folder. You can also open each example’s `landscape.mp4` or `portrait.mp4` directly.
