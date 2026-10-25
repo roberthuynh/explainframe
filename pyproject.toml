@@ -1,5 +1,5 @@
 [project]
-name = "explainer-kit-voice"
+name = "explainframe-voice"
 version = "0.1.0"
 requires-python = ">=3.12,<3.13"
 dependencies = ["kokoro==0.9.4", "misaki[en]==0.9.4", "soundfile==0.14.0", "torch==2.12.1"]

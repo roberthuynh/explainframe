@@ -50,7 +50,7 @@ export function render(a){
   }else{
    person(.21,.04,blue);T('chị',x(.21),y(.30),84,{align:'center',color:blue});T('Older sister',x(.21),y(.49),52,{align:'center',maxWidth:b.w*.40});['Relationship','Setting','Preference'].forEach((v,i)=>box(v,.47,.02+i*.31,.51,.23,i===0?green:blue));
   }
- }else if(topic==='hbs-case-method'){
+ }else if(topic==='case-discussion'){
   if(s===0){box('Available facts',.02,.02,.96,.23);arrow(x(.5),y(.28),x(.5),y(.39));box('Your decision',.12,.42,.76,.24,green);T('Outcome not yet known',x(.5),y(.86),58,{align:'center'});
   }else if(s===1||s===2){
    ['Busy restaurant','Limited cash buffer','One key manager'].forEach((v,i)=>box(v,.02,.01+i*.23,.96,.18,i===1?gold:blue));

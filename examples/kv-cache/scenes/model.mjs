@@ -1,4 +1,4 @@
-import {matvec,attention} from '../../../runtime/operations.mjs';
+import {matvec,attention} from '../../../src/player/operations.mjs';
 // One layer, one head. Inputs already include fixed position information.
 export const INPUTS=[[1,0],[0,2],[1,1],[2,1]];
 export const WQ=[[1,.5],[-.5,1]],WK=[[.5,1],[1,.25]],WV=[[1,2],[-1,1]];

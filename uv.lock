@@ -307,7 +307,7 @@ wheels = [
 ]
 
 [[package]]
-name = "explainer-kit-voice"
+name = "explainframe-voice"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

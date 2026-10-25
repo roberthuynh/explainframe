@@ -2,6 +2,8 @@
 
 ## 0.2.0 (unreleased)
 
+- Organize the engine, browser player and voice worker under `src/`; group schemas, documentation and tests by purpose.
+- Keep integration check output in `.local/test-results/`, with an `EXPLAINFRAME_TEST_OUTPUT` override for isolated runs.
 - Narrated browser scenes, word-highlighted captions and four export layouts.
 - Review player with transcript, source context, text descriptions and revision notes.
 - Editable ZIP handoffs with bundled speech, scene modules and component notices.

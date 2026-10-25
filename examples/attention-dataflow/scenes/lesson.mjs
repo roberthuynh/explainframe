@@ -1,4 +1,4 @@
-import {attention,between,lerp} from '../../../runtime/operations.mjs';
+import {attention,between,lerp} from '../../../src/player/operations.mjs';
 export const KEYS=[[1,0],[0,1]],VALUES=[[2,0],[0,4]],QUERY=[2,0],CHANGED=[0,2];
 const sceneQuery=(id,p)=>id==='predict'?[...CHANGED]:QUERY.map((v,i)=>lerp(v,CHANGED[i],p));
 export function stateAt(id,time,cue){

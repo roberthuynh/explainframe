@@ -1,10 +1,10 @@
 import path from 'node:path';
 import {parseArgs} from 'node:util';
 import {pathToFileURL} from 'node:url';
-import {FORMATS,loadProject,atomic,hash} from '../lib/core.mjs';
-import {prepare,writeReview} from '../lib/publish.mjs';
-import {openPage,capture} from '../lib/render.mjs';
-import {inspectAudit,predictionHolds as inspectHolds,containedCanvasScale} from '../runtime/visual-checks.mjs';
+import {FORMATS,loadProject,atomic,hash} from '../src/engine/core.mjs';
+import {prepare,writeReview} from '../src/engine/publish.mjs';
+import {openPage,capture} from '../src/engine/render.mjs';
+import {inspectAudit,predictionHolds as inspectHolds,containedCanvasScale} from '../src/player/visual-checks.mjs';
 export async function checkScenes(projectPath,out){
  const {dir,project}=await loadProject(projectPath),manifest=await prepare(dir,project);await atomic(path.join(dir,'build/prepared.json'),{projectHash:hash(project),manifest});await writeReview(dir,manifest);
  const {page,browser,errors}=await openPage(path.join(dir,'dist/review.html'),{width:1440,height:1100});const results=[];let portraitFrames=[];

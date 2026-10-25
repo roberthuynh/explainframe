@@ -1,4 +1,4 @@
-import {matvec,between} from '../../../runtime/operations.mjs';
+import {matvec,between} from '../../../src/player/operations.mjs';
 export const INPUT=[1,1], CHANGED=[1,2];
 // Fit all declared inputs and endpoints once, never rescale during a transformation.
 export function domain(){

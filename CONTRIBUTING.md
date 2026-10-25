@@ -19,7 +19,7 @@ AI-assisted work is welcome. A responsible human remains accountable for the cha
 
 ## Local checks
 
-Use the setup appropriate to your host in [docs/tooling.md](docs/tooling.md). From the kit root:
+Use the setup appropriate to your host in [docs/guides/tooling.md](docs/guides/tooling.md). From the kit root:
 
 ```text
 npm ci --ignore-scripts
@@ -50,7 +50,7 @@ chore(repo): add contribution and message checks
 docs(usage): explain the local entry point [skip ci]
 ```
 
-PR titles use the same format. Lead the description with the concrete problem and resulting behavior. Record actual validation and material limits. A small PR can be two sentences; delete irrelevant template sections. Never describe a prototype as released, an unrun host as tested, or an AI review score as learner evidence. See [PR examples](docs/pr-examples.md).
+PR titles use the same format. Lead the description with the concrete problem and resulting behavior. Record actual validation and material limits. A small PR can be two sentences; delete irrelevant template sections. Never describe a prototype as released, an unrun host as tested, or an AI review score as learner evidence. See [PR examples](docs/guides/pr-examples.md).
 
 Use a conventional final title when merging. Repository settings and publication require the maintainer’s authorization.
 
@@ -58,6 +58,6 @@ Use a conventional final title when merging. Repository settings and publication
 
 Keep jobs, caches, virtual environments, models, credentials and personal source material out of commits. The curated synthetic demo packages are intentional small fixtures; arbitrary generated projects belong in ignored workspaces. Do not remove or regenerate the demo media for an unrelated change.
 
-Pin runtime dependencies and update their lockfiles with the package manager. Keep CLI, Node package and Node lock versions consistent. The internal Python voice environment has its own version. Track changes in [CHANGELOG.md](CHANGELOG.md). Version 0.2.0 is an unreleased local development version, not a public release or compatibility promise. The JSON project's `schemaVersion` is a separate interchange-contract version.
+Pin runtime dependencies and update their lockfiles with the package manager. Keep CLI, Node package and Node lock versions consistent. The internal Python voice environment has its own version. Track changes in [CHANGELOG.md](CHANGELOG.md). The Node package is marked `private: true` to prevent accidental npm publication. The JSON project's `schemaVersion` is a separate interchange-contract version.
 
 Keep license/component boundaries in [THIRD_PARTY.md](THIRD_PARTY.md) accurate. A permissive code license does not relicense models, fonts, external FFmpeg builds or user material.

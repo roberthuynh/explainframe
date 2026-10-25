@@ -6,7 +6,7 @@ Give your coding agent a source, a question and an audience. Explainframe turns 
 
 Use it to teach a concept, explain a product, walk through research, train a team or make the case for a decision. You direct the explanation. Your agent writes the script and scenes, runs the tools and handles revisions.
 
-[Download and watch the examples](#watch-the-examples) · [Usage](docs/using.md) · [Setup](docs/tooling.md)
+[Download and watch the examples](#watch-the-examples) · [Usage](docs/guides/using.md) · [Setup](docs/guides/tooling.md)
 
 ![The language-model example shows words becoming tokens and numeric representations.](examples/llm/poster.png)
 
@@ -47,7 +47,7 @@ You do not need to write code or install the tools yourself. Use a coding agent 
 - Approve installation or download requests if your environment requires them. Your agent cannot grant itself permissions or unlock a restricted computer.
 - Review the explanation, pronunciation and pacing. Ask for changes, then keep the editable handoff with the finished video.
 
-**What your agent handles:** checking installed tools, installing missing dependencies within your permissions, preparing narration, writing scenes, generating the requested output, running checks and making revisions. It should use the stage-specific [setup guide](docs/tooling.md), fix ordinary setup problems and tell you precisely if the environment blocks something.
+**What your agent handles:** checking installed tools, installing missing dependencies within your permissions, preparing narration, writing scenes, generating the requested output, running checks and making revisions. It should use the stage-specific [setup guide](docs/guides/tooling.md), fix ordinary setup problems and tell you precisely if the environment blocks something.
 
 To check that the tools work before making your own video, give your agent this prompt:
 
@@ -106,7 +106,7 @@ Your agent handles these steps; this is what it will need on the computer or exe
 | Render a video | The preview tools plus Chromium. |
 | Generate new narration | Node.js tooling plus uv, Python 3.12, the pinned speech environment and Kokoro model files. Chromium is only needed for video rendering or still capture. |
 
-We have tested production on macOS and a short export in a Debian Linux arm64 container. Windows and Linux x64 remain unverified. See [verification limits](VERIFICATION.md).
+We have tested production on macOS and a short export in a Debian Linux arm64 container. Windows and Linux x64 remain unverified. See [verification limits](docs/verification/README.md).
 
 Initial dependency and model downloads need internet access. If setup needs administrator access or your computer blocks an installation, your agent should explain the specific step that needs your help. There is no fixed first-run completion time.
 
@@ -116,8 +116,26 @@ Speech and rendering run locally after setup. Your authoring agent still has its
 
 ## Agents and contributors
 
-Start with [START-HERE.md](START-HERE.md) and [AGENTS.md](AGENTS.md). [Authoring](docs/authoring.md) covers the project format; [custom scenes](docs/custom-scenes.md) covers the drawing API. Use custom scenes from sources you trust: they execute JavaScript.
+Start with [START-HERE.md](START-HERE.md) and [AGENTS.md](AGENTS.md). [Authoring](docs/guides/authoring.md) covers the project format; [custom scenes](docs/guides/custom-scenes.md) covers the drawing API. Use custom scenes from sources you trust: they execute JavaScript.
 
-Run `npm ci --ignore-scripts`, then `npm run verify` from the checkout. See [CONTRIBUTING.md](CONTRIBUTING.md) for checks and [VERIFICATION.md](VERIFICATION.md) for limits. Automated checks do not establish viewer comprehension or time savings.
+Run `npm ci --ignore-scripts`, then `npm run verify` from the checkout. See [CONTRIBUTING.md](CONTRIBUTING.md) for checks and [verification limits](docs/verification/README.md) for limits. Automated checks do not establish viewer comprehension or time savings.
 
 MIT code. Fonts, dependencies and models retain their own licenses; see [THIRD_PARTY.md](THIRD_PARTY.md).
+
+## Repository layout
+
+The [documentation index](docs/README.md) links the guides, design notes and verification record.
+
+| Folder | Purpose |
+| --- | --- |
+| `bin/` | The `explain` command launcher. |
+| `src/engine/` | The Node pipeline, checks and editable handoffs. |
+| `src/player/` | The browser player, captions and scene drawing. |
+| `src/voice/` | The offline Python narration worker. |
+| `schemas/` | The project JSON contract. |
+| `examples/` | Curated scenes, supplied narration and playable demos. |
+| `tests/unit/`, `tests/integration/` | Unit tests and browser/pipeline checks. |
+| `scripts/` | Repository verification and maintenance commands. |
+| `skills/` | The canonical agent workflow; host adapters point here. |
+
+Local settings and test output stay in ignored `.local/`. Node and Python dependencies stay in `node_modules/` and `.venv/`. Each authored project keeps its own `build/` and `dist/` outputs. These local folders do not belong in commits.

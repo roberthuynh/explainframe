@@ -1,5 +1,5 @@
 import {INPUTS,build,changedCase,fullPrefix,validateRecipe} from './model.mjs';
-import {between,attention} from '../../../runtime/operations.mjs';
+import {between,attention} from '../../../src/player/operations.mjs';
 export function stateAt(id,time,cue){
  validateRecipe();
  const before=build(INPUTS.slice(0,-1)),after=build(),fresh=fullPrefix(),revision=changedCase();
